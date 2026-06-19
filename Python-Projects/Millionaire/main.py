@@ -12,7 +12,11 @@ questions = [
     ["What is the smallest country in the world?", "San Marino", "Vatican City", "Monaco", "Liechtenstein", 2]
 ]
 
+price=[1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000, 640000]
+sum=0
+i=0
 for q in questions:
+    
     print(q[0])
     print(f"a.{q[1]}")
     print(f"b.{q[2]}")
@@ -31,3 +35,9 @@ for q in questions:
         print("Correct answer\n")
     else:
         print("Incorrect answer\n")
+        break
+    sum+=price[i]
+    print("You won Rs.", price[i])
+    i+=1
+
+print("Total amount won: Rs.", sum)
